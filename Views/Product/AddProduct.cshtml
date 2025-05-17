@@ -3,30 +3,52 @@
     ViewData["Title"] = "Yeni Ürün Ekle";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
-
 <form method="post" enctype="multipart/form-data">
 
     <label>Ürün Adı</label>
     <input type="text" asp-for="ProductName" class="form-control" />
     <br />
+
     <label>Ürün Görseli</label>
-    <input type="file" asp-for="ImageFile" class="form-control" required/>
+
+    <!-- Sekmeli Görsel Seçimi -->
+    <ul class="nav nav-tabs mb-2" id="imageTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="file-tab" data-bs-toggle="tab" data-bs-target="#fileInput" type="button" role="tab">
+                Dosya Yükle
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="url-tab" data-bs-toggle="tab" data-bs-target="#urlInput" type="button" role="tab">
+                URL Yapıştır
+            </button>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="fileInput" role="tabpanel">
+            <input type="file" asp-for="ImageFile" class="form-control" />
+        </div>
+        <div class="tab-pane fade" id="urlInput" role="tabpanel">
+            <input type="text" asp-for="ImageUrl" class="form-control" placeholder="https://example.com/image.jpg" />
+        </div>
+    </div>
+
     <br />
+
     <label>Ürün Fiyatı</label>
     <input type="text" asp-for="Price" class="form-control" />
     <br />
+
     <label>Puanlama</label>
     <input type="number" asp-for="Review" class="form-control" />
     <br />
-    <label>Kategori</label>
-    <select asp-for="CategoryId" asp-items="@ViewBag.categories" class="form-control"> 
 
-        <option>
-            Kategori Seçiniz
-        </option>
+    <label>Kategori</label>
+    <select asp-for="CategoryId" asp-items="@ViewBag.categories" class="form-control">
+        <option value="">Kategori Seçiniz</option>
     </select>
     <br />
+
     <button class="btn btn-primary">Kaydet <i class="ti ti-device-floppy"></i></button>
-
-
 </form>

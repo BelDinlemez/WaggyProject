@@ -1,0 +1,102 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<section class="container-fluid py-4">
+    <h2 class="mb-4">Merhaba Belinay ✨</h2>
+
+    <!-- Bilgi Kartları -->
+    <div class="row g-4">
+        <div class="col-md-3">
+            <div class="card text-center shadow rounded-4" style="background-color: #aecbfa;">
+                <div class="card-body">
+                    <h5 class="card-title">Toplam Ürün</h5>
+                    <h2 class="card-text text-dark">@ViewBag.TotalProducts</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center shadow rounded-4" style="background-color: #b8e0d2;">
+                <div class="card-body">
+                    <h5 class="card-title">Toplam Kategori</h5>
+                    <h2 class="card-text text-dark">@ViewBag.TotalCategories</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center shadow rounded-4" style="background-color: #ffe599;">
+                <div class="card-body">
+                    <h5 class="card-title">Gelen Mesaj</h5>
+                    <h2 class="card-text text-dark">@ViewBag.TotalMessages</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center shadow rounded-4" style="background-color: #d7bde2;">
+                <div class="card-body">
+                    <h5 class="card-title">Referans Sayısı</h5>
+                    <h2 class="card-text text-dark">@ViewBag.TotalTestimonials</h2>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- Grafik Alanı -->
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <div class="card shadow rounded-1">
+                <div class="card-body">
+                    <h5 class="card-title">Kategori Dağılımı</h5>
+                    <canvas id="categoryChart" height="100"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card shadow rounded-1">
+                <div class="card-body">
+                    <h5 class="card-title">Aylık Ürün Ekleme Sayısı</h5>
+                    <canvas id="productChart" height="200"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Kategori chart
+        var ctx1 = document.getElementById('categoryChart').getContext('2d');
+        var categoryChart = new Chart(ctx1, {
+            type: 'doughnut',
+            data: {
+                labels: @Html.Raw(Json.Serialize(ViewBag.CategoryLabels)),
+                datasets: [{
+                    data: @Html.Raw(Json.Serialize(ViewBag.CategoryCounts)),
+               backgroundColor: ['#aecbfa', '#b8e0d2', '#ffe599', '#f4cccc', '#d7bde2'],
+
+                }]
+            }
+        });
+
+        // Ürün chart
+        var ctx2 = document.getElementById('productChart').getContext('2d');
+        var productChart = new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: @Html.Raw(Json.Serialize(ViewBag.MonthLabels)),
+                datasets: [{
+                    label: 'Eklenen Ürün',
+                    data: @Html.Raw(Json.Serialize(ViewBag.MonthlyProductCounts)),
+                backgroundColor: '#d7bde5'
+                }]
+            }
+        });
+    </script>
+}

@@ -1,0 +1,77 @@
+﻿@model List<Product>
+@{
+    Layout = null;
+}
+
+
+<section id="bestselling" class="my-5 overflow-hidden">
+    <div class="container py-5 mb-5">
+
+        <div class="section-header d-md-flex justify-content-between align-items-center mb-3">
+            <h2 class="display-3 fw-normal">Çok Satanlar</h2>
+            <div>
+                <a href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                    Şimdi Al
+                    <svg width="24" height="24" viewBox="0 0 24 24" class="mb-1">
+                        <use xlink:href="#arrow-right"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class=" swiper bestselling-swiper">
+            <div class="swiper-wrapper">
+                @foreach (var item in Model)
+                {
+                    
+              
+                <div class="swiper-slide">
+                    <!-- <div class="z-1 position-absolute rounded-3 m-3 px-3 border border-dark-subtle">
+                      New
+                    </div> -->
+                    <div class="card position-relative">
+                            <a href="single-product.html">
+                                <img src="@item.ImageUrl" class="img-fluid rounded-4" style="width: 500px; height: 300px; object-fit: contain;" alt="image">
+                            </a>
+                        <div class="card-body p-0">
+                            <a href="single-product.html">
+                                <h3 class="card-title pt-4 m-0">@item.ProductName</h3>
+                            </a>
+
+                            <div class="card-text">
+                                <span class="rating secondary-font">
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" class="text-primary"></iconify-icon>
+                                    5.0
+                                </span>
+
+                                <h3 class="secondary-font text-primary">@item.Price</h3>
+
+                                <div class="d-flex flex-wrap mt-3">
+                                    <a href="#" class="btn-cart me-3 px-4 pt-3 pb-3">
+                                        <h5 class="text-uppercase m-0">Sepete Ekle</h5>
+                                    </a>
+                                    <a href="#" class="btn-wishlist px-4 pt-3 ">
+                                        <iconify-icon icon="fluent:heart-28-filled" class="fs-5"></iconify-icon>
+                                    </a>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                }
+            </div>
+        </div>
+        <!-- / category-carousel -->
+
+
+    </div>
+</section>
+

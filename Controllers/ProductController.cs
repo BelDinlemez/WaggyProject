@@ -43,17 +43,31 @@ namespace WaggyProject.Controllers
         public IActionResult AddProduct(Product model)
 
         {
-            if (model.ImageFile != null) 
+
+            if (model.ImageFile != null)
             {
+                // Dosya yükleme işlemi
                 var currentDirectory = Directory.GetCurrentDirectory();
                 var extension = Path.GetExtension(model.ImageFile.FileName);
-                var fileName= Guid.NewGuid().ToString();
-                var saveLocation= Path.Combine(currentDirectory, "wwwroot/images", fileName + extension);
+                var fileName = Guid.NewGuid().ToString();
+                var saveLocation = Path.Combine(currentDirectory, "wwwroot/images", fileName + extension);
 
-                var stream= new FileStream(saveLocation, FileMode.Create);
+                using (var stream = new FileStream(saveLocation, FileMode.Create))
+                {
+                    model.ImageFile.CopyTo(stream);
+                }
 
-                model.ImageFile.CopyTo(stream);
-                model.ImageUrl="/images/" + fileName + extension;
+                model.ImageUrl = "/images/" + fileName + extension;
+            }
+            else if (!string.IsNullOrEmpty(model.ImageUrl))
+            {
+                
+            }
+            else
+            {
+                
+                ModelState.AddModelError("ImageFile", "Lütfen bir dosya yükleyin veya görsel URL'si girin.");
+                return View(model); // Formu tekrar göster
             }
 
             _context.Add(model);
