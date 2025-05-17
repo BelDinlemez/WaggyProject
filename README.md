@@ -24,24 +24,31 @@
 <h2>🤍Proje Görseller,</h2>
 
 <h3>★ Ana Sayfa</h3>
-<img src="https://raw.githubusercontent.com/BelDinlemez/MyPortfolioUdemy/master/readmeImg/Banner.png" alt="Banner Görseli" />
-<h3>★ Hakkımda</h3>
-<img src="https://raw.githubusercontent.com/BelDinlemez/MyPortfolioUdemy/master/readmeImg/Skill.png" alt="Hakkımda Görseli" />
+<img src="https://raw.githubusercontent.com/BelDinlemez/WaggyProject/master/readmeImg/Kapak.png" alt="Banner Görseli" />
+<h3>★ Çok Satanlar </h3>
+<img src="https://raw.githubusercontent.com/BelDinlemez/WaggyProject/master/readmeImg/Best.png" alt="Hakkımda Görseli" />
 <h3>★ Deneyim</h3>
-<img src="https://raw.githubusercontent.com/BelDinlemez/MyPortfolioUdemy/master/readmeImg/Experience.png" alt="Deneyim Görseli" />
+<img src="https://raw.githubusercontent.com/BelDinlemez/WaggyProject/master/readmeImg/Ürün.png" alt="Deneyim Görseli" />
 <h3>★ Referanslar</h3>
-<img src="https://raw.githubusercontent.com/BelDinlemez/MyPortfolioUdemy/master/readmeImg/Testimonial.png" alt="Referans Görseli" />
+<img src="https://raw.githubusercontent.com/BelDinlemez/WaggyProject/master/readmeImg/Referans.png" alt="Referans Görseli" />
+<h3>★ Blog</h3>
+<img src="https://raw.githubusercontent.com/BelDinlemez/WaggyProject/master/readmeImg/Blog.png" alt="Referans Görseli" />
+<h3>★Fotoğraflar</h3>
+<img src="https://raw.githubusercontent.com/BelDinlemez/WaggyProject/master/readmeImg/Foto.png" alt="Referans Görseli" />
+<h3>★ İletişim</h3>
+<img src="https://raw.githubusercontent.com/BelDinlemez/WaggyProject/master/readmeImg/İletişim.png" alt="Referans Görseli" />
+
 
 <h2>🤍Admin Panel Görselleri </h2>
 
-<h3>★ Proje Kontrol Sayfası</h3>
-<img src="https://raw.githubusercontent.com/BelDinlemez/MyPortfolioUdemy/master/readmeImg/Proje.png" alt="Proje Görseli" />
-<h3>★ Referans Kontrol Sayfası</h3>
-<img src="https://raw.githubusercontent.com/BelDinlemez/MyPortfolioUdemy/master/readmeImg/Referans.png" alt="Referans Görseli" />
-<h3>★ Deneyim Kontrol Sayfası</h3>
-<img src="https://raw.githubusercontent.com/BelDinlemez/MyPortfolioUdemy/master/readmeImg/Deneyim.png" alt="Servisler Görseli" />
-<h3>★ Yapılacaklar Kontrol Sayfası</h3>
-<img src="https://raw.githubusercontent.com/BelDinlemez/MyPortfolioUdemy/master/readmeImg/ToDoList.png" alt="Portfolyo Görseli" />
-<h3>★ İstatistik Sayfası</h3>
-<img src="https://raw.githubusercontent.com/BelDinlemez/MyPortfolioUdemy/master/readmeImg/İstatistik.png" alt="Dashboard Görseli" />
+<h3>★ Dashboard</h3>
+<img src="https://raw.githubusercontent.com/BelDinlemez/WaggyProject/master/readmeImg/Dashboard.png" alt="Proje Görseli" />
+<h3>★ Kategori Kontrol Sayfası</h3>
+<img src="https://raw.githubusercontent.com/BelDinlemez/WaggyProject/master/readmeImg/Category.png" alt="Referans Görseli" />
+<h3>★ Banner Kontrol Sayfası</h3>
+<img src="https://raw.githubusercontent.com/BelDinlemez/WaggyProject/master/readmeImg/Products.png" alt="Servisler Görseli" />
+<h3>★ Ürün Kontrol Sayfası</h3>
+<img src="https://raw.githubusercontent.com/BelDinlemez/WaggyProject/master/readmeImg/Pro.png" alt="Portfolyo Görseli" />
+<h3>★ Gelen Kutusu</h3>
+<img src="https://raw.githubusercontent.com/BelDinlemez/WaggyProject/master/readmeImg/Message.png" alt="Dashboard Görseli" />
 
