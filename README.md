@@ -27,16 +27,17 @@
 <img src="https://raw.githubusercontent.com/BelDinlemez/WaggyProject/master/readmeImg/Kapak.png" alt="Banner Görseli" />
 <h3>★ Çok Satanlar </h3>
 <img src="https://raw.githubusercontent.com/BelDinlemez/WaggyProject/master/readmeImg/Best.png" alt="Hakkımda Görseli" />
-<h3>★ Deneyim</h3>
+<h3>★ Ürünler</h3>
 <img src="https://raw.githubusercontent.com/BelDinlemez/WaggyProject/master/readmeImg/Ürün.png" alt="Deneyim Görseli" />
 <h3>★ Referanslar</h3>
 <img src="https://raw.githubusercontent.com/BelDinlemez/WaggyProject/master/readmeImg/Referans.png" alt="Referans Görseli" />
 <h3>★ Blog</h3>
 <img src="https://raw.githubusercontent.com/BelDinlemez/WaggyProject/master/readmeImg/Blog.png" alt="Referans Görseli" />
-<h3>★Fotoğraflar</h3>
-<img src="https://raw.githubusercontent.com/BelDinlemez/WaggyProject/master/readmeImg/Foto.png" alt="Referans Görseli" />
 <h3>★ İletişim</h3>
 <img src="https://raw.githubusercontent.com/BelDinlemez/WaggyProject/master/readmeImg/İletişim.png" alt="Referans Görseli" />
+<h3>★ Fotoğraflar</h3>
+<img src="https://raw.githubusercontent.com/BelDinlemez/WaggyProject/master/readmeImg/Foto.png" alt="Referans Görseli" />
+
 
 
 <h2>🤍Admin Panel Görselleri </h2>
