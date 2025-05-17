@@ -1,0 +1,39 @@
+﻿@model List<WaggyProject.Entities.Message>
+
+@{
+    Layout = null;
+}
+
+
+
+@if (!Model.Any())
+{
+    <p class="text-muted text-center">Yeni bildiriminiz yok.</p>
+}
+else
+{
+    @foreach (var message in Model)
+    {
+        <a class="list-group-item list-group-item-action @(message.IsRead ? "" : "bg-light")">
+            <div class="d-flex align-items-start">
+                <!-- 🔹 Sabit ikon -->
+                <div class="flex-shrink-0 pe-2">
+                    <i class="ti ti-mail text-success fs-4"></i>
+                </div>
+
+                <!-- 🔹 İçerik: Subject + Body -->
+                <div class="flex-grow-1">
+                    <p class="text-body mb-1">
+                        <b class="fs-6">@message.Name</b>: @message.Subject
+                    </p>
+                    <p class="text-muted small mb-0">
+                        @((message.MessageBody?.Length ?? 0) > 20 ? message.MessageBody.Substring(0, 20) + "..." : message.MessageBody)
+                    </p>
+                </div>
+            </div>
+        </a>
+
+
+    }
+}
+
